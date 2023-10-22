@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator days</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="povrsina">
+        <input type="number" value="" placeholder="Input number" min="0" id="brojj">
+        <div id="dani">
+        <button class="dugme" id="pon">Monday</button>
+        <button class="dugme" id="uto">Tuesday</button>
+        <button class="dugme" id="sre">Wednesday</button>
+        <button class="dugme" id="cet">Thursday</button>
+        <button class="dugme" id="pet">Friday</button>
+        <button class="dugme" id="sub">Saturday</button>
+        <button class="dugme" id="ned">Sunday</button>
+        </div>
+        <button id="sumbit">Sumbit</button>
+    </div>
+    <div id="odgovor">
+        <p id="answer"></p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            let div;
+            let broj_dana;
+            let dan;
+            let resenje;
+            let week = 7;
+            let sum;
+
+            $("#pon").click(function(){
+                dan = 1;
+                $(".dugme").removeClass("jeste");
+                $("#pon").addClass("jeste");
+            })
+            $("#uto").click(function(){
+                dan = 2;
+                $(".dugme").removeClass("jeste");
+                $("#uto").addClass("jeste");
+            })
+            $("#sre").click(function(){
+                dan = 3;
+                $(".dugme").removeClass("jeste");
+                $("#sre").addClass("jeste");
+            })
+            $("#cet").click(function(){
+                dan = 4;
+                $(".dugme").removeClass("jeste");
+                $("#cet").addClass("jeste");
+            })
+            $("#pet").click(function(){
+                dan = 5;
+                $(".dugme").removeClass("jeste");
+                $("#pet").addClass("jeste");
+            })
+            $("#sub").click(function(){
+                dan = 6;
+                $(".dugme").removeClass("jeste");
+                $("#sub").addClass("jeste");
+            })
+            $("#ned").click(function(){
+                dan = 7;
+                $(".dugme").removeClass("jeste");
+                $("#ned").addClass("jeste");
+            })
+
+            $("#sumbit").click(function(){
+                broj_dana = $("#brojj").val();
+                if(parseInt(broj_dana) + parseInt(dan) > 7){
+                    resenje = (parseInt(broj_dana) + dan) % 7; //- (week - dan);
+                    //console.log(10 % 7);
+                    console.log(broj_dana);
+                    console.log(dan);
+                    console.log(week);
+                    console.log(resenje);
+                    Math.floor(resenje);
+                    //console.log(parseInt(resenje));
+
+                    if (resenje === 1){
+                        $("#answer").text("Monday");
+                    }else if (resenje === 2){
+                        $("#answer").text("Tuesday");
+                    }else if (resenje === 3){
+                        $("#answer").text("Wednesday");
+                    }else if (resenje === 4){
+                        $("#answer").text("Thursday");
+                    }else if (resenje === 5){
+                        $("#answer").text("Friday");
+                    }else if (resenje === 6){
+                        $("#answer").text("Saturday");
+                    }else if (resenje === 7){
+                        $("#answer").text("Sunday");
+                    }
+
+                }
+                else if(7 >= (parseInt(broj_dana) + parseInt(dan))){
+                    resenje = parseInt(broj_dana) + parseInt(dan);
+                    console.log(parseInt(broj_dana) + parseInt(dan))
+                    Math.floor(resenje);
+                    console.log(resenje);
+                if (resenje === 1){
+                    $("#answer").text("Monday");
+                }else if (resenje === 2){
+                    $("#answer").text("Tuesday");
+                }else if (resenje === 3){
+                    $("#answer").text("Wednesday");
+                }else if (resenje === 4){
+                    $("#answer").text("Thursday");
+                }else if (resenje === 5){
+                    $("#answer").text("Friday");
+                }else if (resenje === 6){
+                    $("#answer").text("Saturday");
+                }else if (resenje === 7){
+                    $("#answer").text("Sunday");
+                }
+                }
+            })
+
+        })
+    </script>
+</body>
+</html>

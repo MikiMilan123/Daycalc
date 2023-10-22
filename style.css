@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(242, 221, 221);
+    display: flex;
+}
+
+#brojj::-webkit-outer-spin-button,
+#brojj::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#povrsina {
+    width: 70%;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 10px solid black;
+    margin-top: 30px;
+}
+#brojj {
+    width: 38%;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    border: 5px solid black;
+    outline: none;
+    transition: all 0.15s;
+    font-weight: lighter;
+    background-color: rgb(242, 221, 221);
+    border-radius: 20px;
+    padding-left: 8px;
+}
+#brojj:focus {
+    outline: none;
+    border: 5px solid rgb(0, 0, 0);
+    font-weight: bold;
+    padding-left: 8px;
+}
+#brojj:hover {
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+}
+#dan {
+    background-color: rgb(242, 221, 221);
+    width: 40%;
+    height:35px;
+    margin-top: 10px;
+    margin-left: 30%;
+    font-weight: lighter;
+    border: 5px solid black;
+    transition: all 0.15s;
+    color: black;    border-radius: 20px;
+    padding-left: 5px;
+}
+#dan:focus {
+    outline: none;
+    border: 5px solid black;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#dan:hover {
+    border: none;
+    background-color: black;
+    color: white;
+}
+#sumbit {
+    background-color: rgb(242, 221, 221);
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 25%;
+    border-radius: 30px;
+    outline: none;
+    border: 7px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    transition: all 0.15s;
+}
+#sumbit:hover {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+
+#odgovor {
+    width: 50%;
+    height: 570px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#answer {
+    font-size: 75px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.dugme {
+    width: 100px;
+    height: 55px;
+    border: 6px solid black;
+    font-weight: bold;
+    background-color: rgb(242, 221, 221);
+    font-size: 15px;
+    transition: all 0.15s;
+    margin-top: 30px;
+}
+.dugme:hover {
+    background-color: black;
+    color: rgb(242, 221, 221);
+    border: none;
+}
+.nije {
+    background-color: rgb(242, 221, 221);
+    color: black;
+    border: 6px solid black;
+}
+.jeste {
+    background-color: black;
+    color: rgb(242, 221, 221);
+    border: none;
+}
+
+#dani {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
